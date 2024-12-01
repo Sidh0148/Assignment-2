@@ -43,14 +43,13 @@ The simulated IoT sensors generate data every 10 seconds at three locations on t
   "externalTemperature": -4,
   "timestamp": "2024-11-23T12:00:00Z"
 }
+### Azure IoT Hub Configuration
 
-  ## Azure IoT Hub Configuration
-
-1. **Create an IoT Hub in the Azure portal.**
+1. **Create an IoT Hub** in the Azure portal.
 2. **Add devices to the IoT Hub** to simulate sensor data from Dow's Lake, Fifth Avenue, and NAC.
 3. **Use the connection string provided** for each device to push simulated data to the IoT Hub.
 
-## Azure Stream Analytics Job
+### Azure Stream Analytics Job
 
 The Stream Analytics job is configured as follows:
 
@@ -58,7 +57,7 @@ The Stream Analytics job is configured as follows:
 2. **Query Logic**: Aggregates the data over a 5-minute window, calculating average ice thickness and maximum snow accumulation.
 3. **Output Destination**: The processed data is sent to Azure Blob Storage.
 
-### Sample SQL Query:
+#### Sample SQL Query:
 ```sql
 SELECT
     location,
@@ -70,3 +69,4 @@ FROM
     [IoTHubInput]
 GROUP BY
     location, TumblingWindow(minute, 5)
+
