@@ -43,6 +43,9 @@ The simulated IoT sensors generate data every 10 seconds at three locations on t
   "externalTemperature": -4,
   "timestamp": "2024-11-23T12:00:00Z"
 }
+}
+}
+
 ### Azure IoT Hub Configuration
 
 1. **Create an IoT Hub** in the Azure portal.
