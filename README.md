@@ -112,7 +112,7 @@ Sensors generate data in the following format:
 1. Install the required Python library:
    ```bash
    pip install azure-iot-device
-```
+``
 2. Add the **Primary Connection String** from the IoT Hub to the script.
 3. Run the script:
    ```bash
