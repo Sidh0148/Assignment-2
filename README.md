@@ -101,7 +101,7 @@ import time
 from azure.iot.device import IoTHubDeviceClient
 
 # Replace with your IoT Device Connection String
-CONNECTION_STRING = "HostName=newiothub.azure-devices.net;DeviceId=fifthave;SharedAccessKey=Z38PxAUluxoxRNiKHxM8juYJlbNSH87gvHMoWR1sm1M="
+CONNECTION_STRING = "Connection String"
 
 def generate_sensor_data(location):
     """Generate random sensor data."""
@@ -114,6 +114,7 @@ def generate_sensor_data(location):
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     }
 
+{
 def send_data(client, location):
     """Send data to IoT Hub."""
     while True:
