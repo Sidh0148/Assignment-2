@@ -22,9 +22,10 @@ The Rideau Canal Skateway in Ottawa, a cherished attraction, requires constant m
   - [Azure Blob Storage Setup](#4-azure-blob-storage-setup)
 - [Example Outputs](#example-outputs)
 - [Results](#results)
-- [Contributors](#contributors)
-- [License](#license)
+
 ## System Overview
+![Untitled diagram-2024-11-30-082444](https://github.com/user-attachments/assets/c16b0d3b-ae44-468c-aa9b-f3177650d186)
+
 
 The monitoring system simulates sensors installed at three locations along the Rideau Canal Skateway:
 1. Dow's Lake
@@ -73,11 +74,6 @@ Key components:
    ```bash
    python IoTSensorSimulation.py
 
-### Accessing Processed Data
-
-1. Navigate to the Azure portal.
-2. Open the Blob Storage container created for this project.
-3. Browse files organized by date and time.
 
 ---
 
@@ -98,13 +94,39 @@ The system operates in four key stages:
 Sensors generate data in the following format:
 
 ```json
-{  
-  "location": "Dow's Lake",  
-  "iceThickness": 27,  
-  "surfaceTemperature": -1,  
-  "snowAccumulation": 8,  
-  "externalTemperature": -4,  
-  "timestamp": "2024-11-23T12:00:00Z"  
+{
+import json
+import random
+import time
+from azure.iot.device import IoTHubDeviceClient
+
+# Replace with your IoT Device Connection String
+CONNECTION_STRING = "HostName=newiothub.azure-devices.net;DeviceId=fifthave;SharedAccessKey=Z38PxAUluxoxRNiKHxM8juYJlbNSH87gvHMoWR1sm1M="
+
+def generate_sensor_data(location):
+    """Generate random sensor data."""
+    return {
+        "location": location,
+        "iceThickness": random.randint(15, 30),  # cm
+        "surfaceTemperature": random.uniform(-5, 5),  # °C
+        "snowAccumulation": random.randint(0, 20),  # cm
+        "externalTemperature": random.uniform(-10, 5),  # °C
+        "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
+    }
+
+def send_data(client, location):
+    """Send data to IoT Hub."""
+    while True:
+        data = generate_sensor_data(location)
+        client.send_message(json.dumps(data))
+        print(f"Sent data: {data}")
+        time.sleep(20)  # Send data every 20 seconds
+
+if __name__ == "__main__":
+    # Initialize IoT Hub Device Client
+    client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
+    location = "Fifth Ave"  # Change for each device
+    send_data(client, location)
 }
 ```
 #### How to Run
