@@ -4,7 +4,7 @@ import time
 from azure.iot.device import IoTHubDeviceClient
 
 # Replace with your IoT Device Connection String
-CONNECTION_STRING = "HostName=newiothub.azure-devices.net;DeviceId=Dow'slake;SharedAccessKey=9wSqcJf0Gh4nVyoel3CJLZX3iuV6qrapM2k3NOuyi8I="
+CONNECTION_STRING = "connection string"
 
 def generate_sensor_data(location):
     """Generate random sensor data."""
