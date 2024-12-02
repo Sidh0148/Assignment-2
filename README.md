@@ -93,8 +93,7 @@ The system operates in four key stages:
 
 Sensors generate data in the following format:
 
-```json
-{
+```python
 import json
 import random
 import time
@@ -114,7 +113,6 @@ def generate_sensor_data(location):
         "timestamp": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
     }
 
-{
 def send_data(client, location):
     """Send data to IoT Hub."""
     while True:
@@ -128,7 +126,6 @@ if __name__ == "__main__":
     client = IoTHubDeviceClient.create_from_connection_string(CONNECTION_STRING)
     location = "Fifth Ave"  # Change for each device
     send_data(client, location)
-}
 ```
 #### How to Run
 
