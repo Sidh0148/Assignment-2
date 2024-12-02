@@ -189,6 +189,7 @@ IoTHub:
   "timestamp": "2024-11-23T12:00:00Z"  
 }
 ```
+### Processed Data (Stored in Blob Storage)
 ```json
 {  
   "windowEndTime": "2024-11-23T12:05:00Z",  
