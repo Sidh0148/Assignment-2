@@ -215,10 +215,9 @@ IoTHub:
 ### Processed Data (Stored in Blob Storage)
 ```json
 {  
-  "windowEndTime": "2024-11-23T12:05:00Z",  
-  "location": "Dow's Lake",  
-  "avgIceThickness": 26.5,  
-  "maxSnowAccumulation": 9  
+  {"location":"Dow's Lake","avgIceThickness":21.166666666666668,"maxSnowAccumulation":19.0,"aggregationTimestamp":"2024-11-30T08:10:00.0000000Z"}
+{"location":"NAC","avgIceThickness":21.333333333333332,"maxSnowAccumulation":20.0,"aggregationTimestamp":"2024-11-30T08:10:00.0000000Z"}
+{"location":"Fifth Ave","avgIceThickness":21.266666666666666,"maxSnowAccumulation":19.0,"aggregationTimestamp":"2024-11-30T08:10:00.0000000Z"} 
 }
 ```
 ## Results
