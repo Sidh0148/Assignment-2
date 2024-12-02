@@ -157,7 +157,7 @@ IoTHub:
        IoTHubInput  
    GROUP BY  
        TumblingWindow(minute, 5), location
-```
+``
 ### 4. Azure Blob Storage Setup
 
 1. Create a **Blob Storage** container.
