@@ -63,7 +63,7 @@ Key components:
 - Required Python libraries:
   ```bash
   pip install azure-iot-device
-```
+
 ## Usage
 
 ### Simulating Sensors
@@ -72,7 +72,7 @@ Key components:
 2. Run the simulation script:
    ```bash
    python IoTSensorSimulation.py
-```
+
 ### Accessing Processed Data
 
 1. Navigate to the Azure portal.
