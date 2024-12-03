@@ -72,7 +72,7 @@ Key components:
 1. Add your **Primary Connection String** from Azure IoT Hub to the Python script.
 2. Run the simulation script:
    ```bash
-   python IoTSensorSimulation.py
+   python sensor.py
 
 
 ---
