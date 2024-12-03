@@ -3,7 +3,9 @@
 
 ## Introduction
 
-The Rideau Canal Skateway in Ottawa, a cherished attraction, requires constant monitoring to ensure the safety of skaters. This project presents a **Real-Time Monitoring System** that uses simulated IoT sensors, processes the collected data in real-time, and stores it for analysis. By analyzing metrics like ice thickness and weather conditions, the system helps detect unsafe conditions, enhancing visitor safety.
+The Rideau Canal Skateway, spanning 7.8 kilometers through the heart of Ottawa, is not just a recreational facility but a crucial part of the city's winter identity. As the world's largest naturally frozen skating rink, it faces unique challenges in maintaining safe skating conditions for thousands of daily visitors. This project presents a **Real-Time Monitoring System** that uses simulated IoT sensors, processes the collected data in real-time, and stores it for analysis. By analyzing metrics like ice thickness and weather conditions, the system helps detect unsafe conditions, enhancing visitor safety.
+
+The system's importance becomes particularly evident during fluctuating winter temperatures, when rapid changes in weather conditions can affect ice stability. By continuously monitoring key metrics at three strategic locations, the system provides essential data that helps maintenance crews and public safety officials make informed decisions about skateway operations.
 
 ---
 
